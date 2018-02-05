@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="#333">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/bkg_image"
+        android:id="@+id/imageView3"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Create an account on Shoppy"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="24dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usernameTxt2"
+                android:hint="type your email address"
+                android:textAlignment="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordTxt2"
+                android:hint="type a password"
+                android:textAlignment="center"
+                android:inputType="textPassword"
+                android:layout_below="@+id/usernameTxt2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullnameTxt"
+                android:hint="type your full name"
+                android:textAlignment="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/passwordTxt2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="Sign Up"
+                android:id="@+id/signUpButt2"
+                android:background="#ed5564"
+                android:textColor="#fff"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/fullnameTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="Terms Of Use"
+                android:id="@+id/touButt"
+                android:background="#f2f2f2"
+                android:textColor="#111"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/signUpButt2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

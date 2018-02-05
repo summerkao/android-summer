@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUs">
+
+
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_home"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_wishlist"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_wishlist"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="10dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_cart"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_cart"
+            android:layout_marginLeft="20dp"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/tab_contact"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/tab_contact"
+            android:backgroundTint="@color/colorAccent"
+            android:textAllCaps="false"
+            android:textSize="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Feel free to contact us for any feedback, orders details or any other info."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView11"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#333"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/email_icon"
+        android:id="@+id/imageView4"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"/>
+
+    <Button
+        android:text="Contact Us by Email"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/contEmailButt"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:textColor="#333"
+        android:textAlignment="textStart"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/contPhoneButt"
+        android:layout_alignStart="@+id/contPhoneButt"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/contPhoneButt"
+        android:textSize="12sp"
+        android:textStyle="normal|bold"/>
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/location_icon"
+        android:id="@+id/imageView5"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/contAddressButt"
+        android:layout_above="@+id/contPhoneButt"/>
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/phone_icon"
+        android:id="@+id/imageView6"
+        android:scaleType="centerCrop"
+        android:layout_alignTop="@+id/contPhoneButt"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:text="+01123456789"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        android:id="@+id/contPhoneButt"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:textColor="#333"
+        android:textAlignment="textStart"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/contAddressButt"
+        android:layout_alignStart="@+id/contAddressButt"
+        android:layout_alignEnd="@+id/contAddressButt"
+        android:textSize="12sp"
+        android:textStyle="normal|bold"/>
+
+    <Button
+        android:text="W 101 Street, manhattan, New York, USA"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/contAddressButt"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#333"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_toEndOf="@+id/imageView5"
+        android:textSize="12sp"
+        android:textStyle="normal|bold"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:text="Shoppy Inc."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView13"
+        android:textColor="#111"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentStart="true"/>
+
+
+</RelativeLayout>

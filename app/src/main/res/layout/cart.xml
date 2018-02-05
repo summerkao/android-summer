@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".Cart">
+
+
+
+    <TextView
+        android:text="Long tap on a photo to remove a Product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView5"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="false"
+        android:id="@+id/cartCartListView"
+        android:divider="#999"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/cartBottomView"
+        android:layout_marginBottom="10dp"
+        android:dividerHeight="1dp"
+        android:choiceMode="singleChoice"/>
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_home"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:textSize="10dp"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_wishlist"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_wishlist"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/tab_cart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/tab_cart"
+            android:backgroundTint="@color/colorAccent"
+            android:textAllCaps="false"
+            android:textSize="10dp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_contact"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_contact"
+            android:layout_marginLeft="20dp"
+            android:textSize="10dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:background="#f4f4f4"
+        android:layout_height="100dp"
+        android:id="@+id/cartBottomView">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:text="Total Amount: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textStyle="normal|bold"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:text="$"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cartCurrencyTxt2"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cartTotalAmountTxt"
+                android:layout_alignTop="@+id/textView6"
+                android:layout_toEndOf="@+id/textView6"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <Button
+            android:text="Checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cartCheckoutButt"
+            android:background="@android:color/holo_orange_light"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textStyle="normal|bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cartNotesLayout"
+        android:background="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2000dp">
+
+        <TextView
+            android:text="Write a note for this product, such as desired size or color, etc."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="49dp"
+            android:id="@+id/cartNoteTxt"
+            android:layout_alignParentEnd="true"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="tap here to type"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#333"
+            android:background="#f1f1f1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:maxLines="4"
+            android:inputType="none"
+            android:singleLine="false"/>
+
+        <Button
+            android:text="Save note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:id="@+id/cartSaveNoteButt"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@android:color/holo_orange_light"
+            android:layout_below="@+id/cartNoteTxt"
+            android:layout_alignEnd="@+id/textView4"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="domain.com.shoppy">
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <!-- For Push Notifications -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+
+
+    <!-- IMPORTANT: REPLACE "domain.com.shoppy" WITH YOUR OWN PACKAGE NAME -->
+    <permission android:name="domain.com.shoppy.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="domain.com.shoppy.permission.C2D_MESSAGE" />
+
+
+
+
+
+    <application
+        android:name=".Configs"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+
+        <!-- Splash screen -->
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- IMPORTANT: Replace "170755635456" with your own GCM Sender Id. -->
+        <meta-data android:name="com.parse.push.gcm_sender_id"
+                   android:value="id:170755635456" />
+
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+
+                <!-- IMPORTANT: REPLACE "domain.com.shoppy" WITH YOUR OWN PACKAGE NAME -->
+                <category android:name="domain.com.shoppy" />
+
+
+
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+
+
+
+
+        <!-- For Facebook SDK -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+
+
+
+        <!-- Other Activities -->
+        <activity android:name=".Home"/>
+        <activity android:name=".Login"/>
+        <activity android:name=".SignUp"/>
+        <activity android:name=".TermsOfUse">
+        </activity>
+        <activity android:name=".ProductsList">
+        </activity>
+        <activity android:name=".ProdDetails">
+        </activity>
+        <activity android:name=".Wishlist">
+        </activity>
+        <activity android:name=".Cart">
+        </activity>
+        <activity android:name=".Account">
+        </activity>
+        <activity android:name=".MyOrders">
+        </activity>
+        <activity android:name=".ContactUs">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shoppy</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN FACEBOOK APP ID YOU'LL GET ON https://developers.facebook.com/apps/ -->
+    <string name="facebook_app_id">240392609751096</string>
+
+
+</resources>

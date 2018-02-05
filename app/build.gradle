@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "domain.com.shoppy"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.squareup.okhttp3:okhttp:+'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.parse:parse-android:+'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    compile 'com.google.android.gms:play-services-gcm:+'
+    compile ('com.paypal.sdk:paypal-android-sdk:+') {
+
+        // COMMENT THE LINE BELOW IF YOU WANT TO ENABLE DCC (DIRECT CREDIT CARD PAYMENT)
+        // ** PLEASE NOTE THAT DCC IS ALLOWED ONLY FOR PRO BUSINESS PAYPAL ACCOUNTS IN THE US AND UK **
+        exclude group: 'io.card'
+    }
+
+}

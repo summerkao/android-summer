@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="28dp"
+        android:id="@+id/progressBar2"
+        android:indeterminateTint="@android:color/holo_red_light"
+        android:layout_alignTop="@+id/cartProdImage"
+        android:layout_alignEnd="@+id/cartProdImage"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cartProdImage"
+        android:background="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:text="loading..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cartProdImage"
+        android:layout_toEndOf="@+id/cartProdImage"
+        android:id="@+id/cartProdName"
+        android:textStyle="normal|bold"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#111"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:text="Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textSize="12sp"
+        android:layout_alignBaseline="@+id/cartMinusButt"
+        android:layout_alignBottom="@+id/cartMinusButt"
+        android:layout_alignStart="@+id/cartProdName"/>
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartQtyTxt"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/cartPlusButt"
+        android:layout_alignBottom="@+id/cartPlusButt"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold"
+        android:layout_marginRight="20dp"
+        android:textColor="#111"/>
+
+    <Button
+        android:text="-"
+        android:layout_height="30dp"
+        android:id="@+id/cartMinusButt"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:background="#e8e8e8"
+        android:layout_width="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/cartProdName"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_marginStart="9dp"
+        android:textSize="16sp"
+        android:focusable="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="false"/>
+
+    <Button
+        android:text="+"
+        android:layout_height="30dp"
+        android:id="@+id/cartPlusButt"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:background="#d5d5d5"
+        android:layout_width="40dp"
+        android:layout_below="@+id/cartProdName"
+        android:layout_toEndOf="@+id/cartMinusButt"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cartAddNoteButt"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/cartFinalPriceTxt"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginRight="10dp"
+        android:textColor="#333"/>
+
+    <TextView
+        android:text="$"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cartFinalPriceTxt"
+        android:id="@+id/cartCurrencyTxt"
+        android:layout_toStartOf="@+id/cartFinalPriceTxt"
+        android:layout_marginRight="2dp"
+        android:textSize="12sp"
+        android:textColor="#333"/>
+
+    <Button
+        android:text="+ Add Note"
+        android:layout_width="wrap_content"
+        android:id="@+id/cartAddNoteButt"
+        android:textSize="12sp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@android:color/holo_red_light"
+        android:textAllCaps="false"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/cartMinusButt"
+        android:layout_toEndOf="@+id/cartProdImage"
+        android:focusableInTouchMode="false"
+        android:focusable="false"/>
+
+</RelativeLayout>

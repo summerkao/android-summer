@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".Account">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/aMyOrdersButt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="My Orders"
+                android:textColor="#fff"
+                android:textStyle="normal|bold"/>
+
+            <TextView
+                android:text="FULL NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aMyOrdersButt"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/textView8"
+                android:textStyle="normal|bold"
+                android:textColor="#111"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/aFullNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/aMyOrdersButt"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView8"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:hint="type your full name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:text="EMAIL ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView9"
+                android:textStyle="normal|bold"
+                android:textColor="#111"
+                android:layout_below="@+id/aFullNameTxt"
+                android:layout_alignStart="@+id/aFullNameTxt"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/aEmailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/aMyOrdersButt"
+                android:layout_alignStart="@+id/textView9"
+                android:layout_below="@+id/textView9"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:hint="type your email address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:text="SHIPPING ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textStyle="normal|bold"
+                android:textColor="#111"
+                android:layout_below="@+id/aEmailTxt"
+                android:layout_alignStart="@+id/aEmailTxt"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/aShippingTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/aEmailTxt"
+                android:layout_alignStart="@+id/textView10"
+                android:layout_below="@+id/textView10"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:hint="type your shipping address"
+                android:imeOptions="actionDone"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/aUpdatePorfileButt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/aShippingTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="Update Profile"
+                android:textStyle="normal|bold"/>
+
+            <Button
+                android:id="@+id/aTOUButt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/aShippingTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="Terms Of use"
+                android:textColor="#fff"
+                android:textStyle="normal|bold"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
